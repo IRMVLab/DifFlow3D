@@ -1,9 +1,9 @@
-# Multi-Scale Bidirectional Recurrent Network with Hybrid Correlation for Point Cloud Based Scene Flow Estimation
-Wencan Cheng and Jong Hwan Ko
+# DifFlow3D: Toward Robust Uncertainty-Aware Scene Flow Estimation with Iterative Diffusion-Based Refinement
+Jiuming Liu, Guangming Wang, Weicai Ye, Chaokang Jiang, Jinru Han, Zhe Liu, Guofeng Zhang, Dalong Du, Hesheng Wang#
 
-IEEE International Conference on Computer Vision (ICCV), 2023
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024
 
-## Prerequisities
+## Environments
 Our model is trained and tested under:
 * Python 3.6.9
 * NVIDIA GPU + CUDA CuDNN
@@ -17,7 +17,7 @@ Our model is trained and tested under:
 * pptk
 * thop
 
- Please follow this [repo](https://github.com/sshaoshuai/Pointnet2.PyTorch) or the instructions below for compiling the furthest point sampling, grouping and gathering operation for PyTorch.
+Please follow the instructions below for compiling the furthest point sampling, grouping and gathering operation for PyTorch.
 ```
 cd pointnet2
 python setup.py install
@@ -28,8 +28,6 @@ cd ../
 ## Data preprocess
 
 We adopt the equivalent preprocessing steps in [HPLFlowNet](https://web.cs.ucdavis.edu/~yjlee/projects/cvpr2019-HPLFlowNet.pdf) and [PointPWCNet](https://github.com/DylanWusee/PointPWC).
-
-We copy the preprocessing instructions here for your convinience.
 
 * FlyingThings3D:
 Download and unzip the "Disparity", "Disparity Occlusions", "Disparity change", "Optical flow", "Flow Occlusions" for DispNet/FlowNet2.0 dataset subsets from the [FlyingThings3D website](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html) (we used the paths from [this file](https://lmb.informatik.uni-freiburg.de/data/FlyingThings3D_subset/FlyingThings3D_subset_all_download_paths.txt), now they added torrent downloads)
@@ -62,9 +60,14 @@ Please run the following instrcutions for evaluating.
     ```bash
     python3 evaluate_occ.py config_evaluate_occ.yaml
     ```
+### Pretrain Weights
+Three checkpoints are provided under the file `pretrain_wights`.
+- `model_difflow_355_0.0114.pth`: checkpoints for $flt3d_s$ and $KITTI_s$.
+- `model_difflow_occ_327_0.0428.pth`: checkpoints for $flt3d_o$ and $KITTI_o$.
 
+  
 ### Train
-If you need a newly trained model, please set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section before evaluation at the first. Then excute following instructions.
+If you want to train from scratch, please set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section before evaluation at the first. Then excute following instructions.
 
 - For $flt3d_s$ and $KITTI_s$
     ```bash
@@ -75,7 +78,4 @@ If you need a newly trained model, please set `data_root` in the configuration f
     python3 train_difflow_occ.py config_train_occ.yaml
     ```
 
-### Pretrain Weights
-3 checkpoints are provided under file `pretrain_wights`
-- `model_difflow_355_0.0114.pth`: checkpoints for $flt3d_s$ and $KITTI_s$
-- `model_difflow_occ_327_0.0428.pth`: checkpoints for $flt3d_o$
+
