@@ -79,4 +79,26 @@ If you want to train from scratch, please set `data_root` in the configuration f
     python3 train_difflow_occ.py config_train_occ.yaml
     ```
 
+### Quantitative results:
+## without occlusion 
+<img src="no_occ.png">
+
+## with occlusion
+<img src="occ.png">
+
+## Citation
+```
+@article{liu2023difflow3d,
+  title={DifFlow3D: Toward Robust Uncertainty-Aware Scene Flow Estimation with Diffusion Model},
+  author={Liu, Jiuming and Wang, Guangming and Ye, Weicai and Jiang, Chaokang and Han, Jinru and Liu, Zhe and Zhang, Guofeng and Du, Dalong and Wang, Hesheng},
+  journal={arXiv preprint arXiv:2311.17456},
+  year={2023}
+}
+```
+### Acknowledgments
+We thank the following open-source project for the help of the implementations:
+- [PointNet++](https://github.com/charlesq34/pointnet2) 
+- [MSBRN](https://github.com/cwc1260/MSBRN)
+
+
 
