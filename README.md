@@ -50,9 +50,10 @@ python3 data_preprocess/process_kitti.py RAW_DATA_PATH SAVE_PATH/KITTI_processed
 Set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section before evaluation. 
 
 We provide pretrained model in ```pretrain_weights```.
+- `model_difflow_355_0.0114.pth`: checkpoints for flt3d_s and KITTI_s.
+- `model_difflow_occ_327_0.0428.pth`: checkpoints for flt3d_o and KITTI_o.
 
-Please run the following instrcutions for evaluating.
-
+Please run the following instrcutions for evaluation.
 - For flt3d_s and KITTI_s
     ```bash
     python3 evaluate.py config_evaluate.yaml
@@ -61,10 +62,7 @@ Please run the following instrcutions for evaluating.
     ```bash
     python3 evaluate_occ.py config_evaluate_occ.yaml
     ```
-### Pretrain Weights
-Checkpoints are provided under the file `pretrain_wights`.
-- `model_difflow_355_0.0114.pth`: checkpoints for flt3d_s and KITTI_s.
-- `model_difflow_occ_327_0.0428.pth`: checkpoints for flt3d_o and KITTI_o.
+
 
   
 ### Train
