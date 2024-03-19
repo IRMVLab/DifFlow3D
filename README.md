@@ -52,28 +52,28 @@ We provide pretrained model in ```pretrain_weights```.
 
 Please run the following instrcutions for evaluating.
 
-- For $flt3d_s$ and $KITTI_s$
+- For flt3d_s and KITTI_s
     ```bash
     python3 evaluate.py config_evaluate.yaml
     ```
-- For $flt3d_o$ and $KITTI_o$
+- For flt3d_o and KITTI_o
     ```bash
     python3 evaluate_occ.py config_evaluate_occ.yaml
     ```
 ### Pretrain Weights
-Three checkpoints are provided under the file `pretrain_wights`.
-- `model_difflow_355_0.0114.pth`: checkpoints for $flt3d_s$ and $KITTI_s$.
-- `model_difflow_occ_327_0.0428.pth`: checkpoints for $flt3d_o$ and $KITTI_o$.
+Checkpoints are provided under the file `pretrain_wights`.
+- `model_difflow_355_0.0114.pth`: checkpoints for flt3d_s and KITTI_s.
+- `model_difflow_occ_327_0.0428.pth`: checkpoints for flt3d_o and KITTI_o.
 
   
 ### Train
 If you want to train from scratch, please set `data_root` in the configuration file to `SAVE_PATH` in the data preprocess section before evaluation at the first. Then excute following instructions.
 
-- For $flt3d_s$ and $KITTI_s$
+- For flt3d_s and KITTI_s
     ```bash
     python3 train_difflow.py config_train.yaml
     ```
-- For $flt3d_o$ and $KITTI_o$
+- For flt3d_o and KITTI_o
     ```bash
     python3 train_difflow_occ.py config_train_occ.yaml
     ```
