@@ -1,0 +1,43 @@
+gpu: "0"
+multi_gpu: "0,1" #null
+
+model_name: model_difflow_occ
+iters: 4
+
+full: False
+
+evaluate: True
+resume: True
+
+ckpt_dir: ./pretrain_weights/
+
+arch: PointConvLightRes
+last_relu: False
+allow_less_points: False
+
+# general args
+batch_size: 4
+pretrain: ./pretrain_weights/model_difflow_occ_327_0.0428.pth
+num_points: 8192 # 16384 for KITTI
+
+DEVICE: cuda
+
+dataset: KITTI_Occlusion # FlyingThings3DSubset_Occlusion KITTI_Occlusion 
+data_root: /dataset 
+
+data_process:
+  DEPTH_THRESHOLD: 35.
+  NO_CORR: True
+
+# miscalleneous
+workers: 0
+
+# uncertainty
+uncertainty: 0.02
+
+
+
+
+
+
+

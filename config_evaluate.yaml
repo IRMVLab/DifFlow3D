@@ -1,0 +1,43 @@
+gpu: "0"
+multi_gpu: 0,1,2,3
+
+model_name: model_difflow
+iters: 4
+
+full: False
+
+evaluate: True
+resume: True
+
+ckpt_dir: ./pretrain_weights/
+
+arch: PointConvLightRes
+last_relu: False
+allow_less_points: False
+
+# general args
+batch_size: 4
+pretrain: ./pretrain_weights/model_difflow_355_0.0114.pth
+num_points: 8192
+
+DEVICE: cuda
+
+dataset: FlyingThings3DSubset # FlyingThings3DSubset KITTI 
+data_root: /dataset/ 
+
+data_process:
+  DEPTH_THRESHOLD: 35.
+  NO_CORR: True
+
+# miscalleneous
+workers: 0
+
+# uncertainty
+uncertainty: 0.02
+
+
+
+
+
+
+
