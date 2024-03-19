@@ -91,11 +91,12 @@ If you want to train from scratch, please set `data_root` in the configuration f
 
 ## Citation
 ```
-@article{liu2023difflow3d,
-  title={DifFlow3D: Toward Robust Uncertainty-Aware Scene Flow Estimation with Diffusion Model},
-  author={Liu, Jiuming and Wang, Guangming and Ye, Weicai and Jiang, Chaokang and Han, Jinru and Liu, Zhe and Zhang, Guofeng and Du, Dalong and Wang, Hesheng},
-  journal={arXiv preprint arXiv:2311.17456},
-  year={2023}
+@InProceedings{DifFlow3D,
+    author={Liu, Jiuming and Wang, Guangming and Ye, Weicai and Jiang, Chaokang and Han, Jinru and Liu, Zhe and Zhang, Guofeng and Du, Dalong and Wang, Hesheng}, 
+    title={DifFlow3D: Toward Robust Uncertainty-Aware Scene Flow Estimation with Diffusion Model},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month={June},
+    year={2024}
 }
 ```
 ### Acknowledgments
