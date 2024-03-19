@@ -2,6 +2,11 @@
 Jiuming Liu, Guangming Wang, Weicai Ye, Chaokang Jiang, Jinru Han, Zhe Liu, Guofeng Zhang, Dalong Du, Hesheng Wang#
 
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024
+
+## 📣 News
+- **[19/Mar/2024]** We have released our models and checkpoints based on MSBRN!
+- **[27/Feb/2024]** Our paper has been accepted by **CVPR 2024**! 🥳🥳🥳
+  
 <img src="pipeline.png">
 
 ## Environments
