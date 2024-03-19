@@ -2,6 +2,7 @@
 Jiuming Liu, Guangming Wang, Weicai Ye, Chaokang Jiang, Jinru Han, Zhe Liu, Guofeng Zhang, Dalong Du, Hesheng Wang#
 
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024
+<img src="pipeline.png">
 
 ## Environments
 Our model is trained and tested under:
