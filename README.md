@@ -11,9 +11,9 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognitio
 
 ## Environments
 Our model is trained and tested under:
-* Python 3.6.9
-* NVIDIA GPU + CUDA CuDNN
-* PyTorch (torch == 1.6.0)
+* Python 3.8.10
+* NVIDIA GPU RTX3090 + CUDA CuDNN
+* PyTorch (torch == 1.7.1+ cu110)
 * scipy
 * tqdm
 * sklearn
