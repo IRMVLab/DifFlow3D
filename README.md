@@ -4,6 +4,7 @@ Jiuming Liu, Guangming Wang, Weicai Ye, Chaokang Jiang, Jinru Han, Zhe Liu, Guof
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024
 
 ## 📣 News
+- **[31/Oct/2025]** Our journal version has been accepted by T-PAMI! The code about additional experiments will be released soon.
 - **[19/Mar/2024]** We have released our models and checkpoints based on MSBRN!
 - **[27/Feb/2024]** Our paper has been accepted by **CVPR 2024**! 🥳🥳🥳
   
